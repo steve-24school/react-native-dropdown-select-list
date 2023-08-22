@@ -8,6 +8,7 @@ import {
     ScrollView,
     Animated,
     TextInput,
+    Keyboard
 } from 'react-native';
 
 import { SelectListProps } from '..';
@@ -168,7 +169,7 @@ const SelectList: React.FC<SelectListProps> =  ({
                         
                     </View>
                 :
-                    <TouchableOpacity style={[styles.wrapper,boxStyles]} onPress={() => { if(!dropdown){ slidedown() }else{ slideup() } }}>
+                    <TouchableOpacity style={[styles.wrapper,boxStyles]} onPress={() => { if(!dropdown){ Keyboard.dismiss(); slidedown() }else{ slideup() } }}>
                         <Text style={[{fontFamily},inputStyles]}>{ (selectedval == "") ? (placeholder) ? placeholder : 'Select option' : selectedval  }</Text>
                         {
                             (!arrowicon)
