@@ -137,6 +137,7 @@ const SelectList: React.FC<SelectListProps> =  ({
                             }
                             
                             <TextInput 
+                                placeholderTextColor={Platform.OS === 'ios' ? '#C7C7CD' : '#808080'}
                                 placeholder={searchPlaceholder}
                                 onChangeText={(val) => {
                                     let result =  data.filter((item: L1Keys) => {
