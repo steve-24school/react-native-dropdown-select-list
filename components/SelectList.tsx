@@ -172,7 +172,7 @@ const SelectList: React.FC<SelectListProps> =  ({
                     </View>
                 :
                     <TouchableOpacity style={[styles.wrapper,boxStyles]} onPress={() => { if(!dropdown){ Keyboard.dismiss(); slidedown() }else{ slideup() } }}>
-                        <Text  placeholderTextColor={Platform.OS === 'ios' ? '#C7C7CD' : '#808080'} style={[{fontFamily},inputStyles]}>{ (selectedval == "") ? (placeholder) ? placeholder : 'Select option' : selectedval  }</Text>
+                        <Text style={[{ fontFamily },inputStyles,selectedval === "" && { color: Platform.OS === "ios" ? "#C7C7CD" : "#808080" }]}>{ (selectedval == "") ? (placeholder) ? placeholder : 'Select option' : selectedval  }</Text>
                         {
                             (!arrowicon)
                             ?
