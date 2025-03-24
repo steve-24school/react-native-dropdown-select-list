@@ -8,7 +8,8 @@ import {
     ScrollView,
     Animated,
     TextInput,
-    Keyboard
+    Keyboard,
+    Platform
 } from 'react-native';
 
 import { SelectListProps } from '..';
